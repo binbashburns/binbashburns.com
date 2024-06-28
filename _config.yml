@@ -1,6 +1,6 @@
 # Site
 repository: binbashburns/binbashburns.com
-# favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
+favicon: images/favicon.ico
 
 # Content configuration version
 version: 2
@@ -16,12 +16,12 @@ website: https://github.com/binbashburns
 # website_title: Web (Website title override)
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: true
 
 # Social links
 # twitter_username: n.a
 github_username:  binbashburns
-stackoverflow_username: "25816768"
+# stackoverflow_username: "000000001"
 # dribbble_username: n.a
 # facebook_username: n.a
 # flickr_username: n.a
@@ -64,8 +64,10 @@ about_content: | # this will include new lines to allow paragraphs
 
   I'm always looking for new opportunities to learn and grow, so if you think I'd be a good fit for your team, please don't hesitate to reach out.
 
+  This online resume was generated with the help of the [Modern Resume Theme](https://github.com/sproogen/modern-resume-theme) for Jekyll. It's hosted on GitHub Pages. You can check out my source code on my [GitHub](https://github.com/binbashburns/binbashburns.com)!
+
 content:
-  - title: Projects # Title for the section
+  - title: Projects 
     layout: list # Type of content section (list/text)
     content:
       - layout: left
@@ -93,8 +95,8 @@ content:
         sub_title: IT Specialist (25B)/Warrant Officer Candidate (09W/170A)
         caption: Jun 2020 - Present
         link: https://nationalguard.com/
-        quote: >
-          Established in 1636, the Army National Guard is the oldest component of the U.S. Armed Forces and serves as the primary combat reserve of the U.S. Army.
+        # quote: >
+        #   Established in 1636, the Army National Guard is the oldest component of the U.S. Armed Forces and serves as the primary combat reserve of the U.S. Army.
         description: | # this will include new lines to allow paragraphs
           - Client Operating Systems
           - Computer Hardware
@@ -107,8 +109,8 @@ content:
         sub_title: Cloud Engineer II
         caption: Jul 2023 - Present
         link: https://coalfire.com/
-        quote: >
-          Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
+        # quote: >
+        #   Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
         description: | # this will include new lines to allow paragraphs
           - Transition FedRAMP and DoD client environments to align with updated NIST 800-53 revision 5 guidance (from previous revision 4 guidelines)
           - Advise, architect and build customer cloud environments using Infrastructure as Code, shell scripting and automation
@@ -123,8 +125,8 @@ content:
         sub_title: IT Cybersecurity Specialist
         caption: Oct 2022 - Jul 2023
         link: https://www.cisa.gov/
-        quote: >
-          CISA is the operational lead for federal cybersecurity and the national coordinator for critical infrastructure security and resilience.
+        # quote: >
+        #   CISA is the operational lead for federal cybersecurity and the national coordinator for critical infrastructure security and resilience.
         description: | # this will include new lines to allow paragraphs
           - Participate in planning, definition, and high-level design of the solution and exploration of solution alternatives 
           - Actively participate in the Continuous Exploration process as part of the Continuous Delivery Pipeline
@@ -141,8 +143,8 @@ content:
         sub_title: Cloud Engineer I
         caption: Feb 2022 - Oct 2022
         link: https://coalfire.com/
-        quote: >
-          Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
+        # quote: >
+        #   Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
         description: | # this will include new lines to allow paragraphs
           - Design, architect, and deploy client architectures in the AWS, Azure or GCP cloud space
           - Member of a highly-collaborative and agile engineering team of Solution Engineers
@@ -155,8 +157,8 @@ content:
         sub_title: Cybersecurity System Administrator
         caption: Nov 2021 - Feb 2022
         link: https://bechtel.com/
-        quote: >
-          Bechtel Corporation is an American engineering, procurement, construction, and project management company.
+        # quote: >
+        #   Bechtel Corporation is an American engineering, procurement, construction, and project management company.
         description: | # this will include new lines to allow paragraphs
           - Assist in preparing plans, policies and procedures for Blue Grass Chemical Agent-Destruction Pilot Plant (BGCAPP) Cybersecurity Program
           - Support ISSO and IAM in satisfying contractual requirements to achieve and maintain ATO via documentation efforts and continuous monitoring techniques.
@@ -169,8 +171,8 @@ content:
         sub_title: Security Analyst
         caption: Nov 2019 - Oct 2021
         link: https://senture.com/
-        quote: >
-          Senture, a wholly owned subsidiary of Teleperformance, serves as the primary go-to-market entity for the US government and public sector.
+        # quote: >
+        #   Senture, a wholly owned subsidiary of Teleperformance, serves as the primary go-to-market entity for the US government and public sector.
         description: | # this will include new lines to allow paragraphs
           - Assess and document enterprise compliance and risk posture as it related to it's information assets
           - Execute strategy for dealing with increasing number of audits, compliance checks and external assessment processes for internal/external auditors, FISMA, NIST SP 800-53, SOC 2, PCI DSS 
@@ -196,6 +198,7 @@ content:
         #   Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
           Grade: 4.0 GPA
+          
           Activities and societies: President, UC Cyber Club
           Summa Cum Laude
           
@@ -224,6 +227,7 @@ content:
         #   Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
           Grade: 3.88 GPA
+          
           Activities and societies: Phi Theta Kappa Honors Society
 
           Major: Information Security
