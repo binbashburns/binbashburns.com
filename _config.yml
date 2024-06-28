@@ -172,17 +172,6 @@ content:
         quote: >
           Senture, a wholly owned subsidiary of Teleperformance, serves as the primary go-to-market entity for the US government and public sector.
         description: | # this will include new lines to allow paragraphs
-          Description of role
-  - title: Education
-    layout: list
-    content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
           - Assess and document enterprise compliance and risk posture as it related to it's information assets
           - Execute strategy for dealing with increasing number of audits, compliance checks and external assessment processes for internal/external auditors, FISMA, NIST SP 800-53, SOC 2, PCI DSS 
           - Gap analysis
@@ -196,12 +185,79 @@ content:
           - Coordinate with all levels of System staff including; help desk, developers and networking staff, auditors, and all technology vendors and contractors, in matters related to information security and security awareness
           - Assess computer hardware, software, and systems for security risks or violations and work with IT staff and operations to recommend solutions. 
           - Develop strategies to address awareness and training for all stakeholders as well as technical solutions
-  - title: A Little More About Me
+  - title: Education
+    layout: list
+    content:
+      - layout: top-right
+        title: University of the Cumberlands
+        sub_title: Bachelor of Applied Science in Information Technology - Cybersecurity
+        caption: Apr 2022 - May 2023
+        # quote: >
+        #   Short institution or course description (optional)
+        description: | # this will include new lines to allow paragraphs
+          Grade: 4.0 GPA
+          Activities and societies: President, UC Cyber Club
+          Summa Cum Laude
+          
+          National Center of Academic Excellence in Cyber Defense (CAE-CD) by the National Security Agency (NSA) and the Department of Homeland Security (DHS)
+
+          Major: Cybersecurity
+
+          Related coursework: 
+          - Application Software
+          - Programming
+          - Hardware
+          - Web Design
+          - Networking
+          - Server Administration
+          - Business Intelligence
+          - Developing and implementing current security policies
+          - Managing compliance with federal regulations including SOX, GLBA, and HIPAA
+          - Creating disaster prevention and recovery plans
+          - Recognizing and preventing exploitation in hardware, software and network configurations
+
+      - layout: top-right
+        title: Somerset Community College
+        sub_title: Associate of Arts and Sciences (AAS) in Information Security
+        caption: 2017 - 2019
+        # quote: >
+        #   Short institution or course description (optional)
+        description: | # this will include new lines to allow paragraphs
+          Grade: 3.88 GPA
+          Activities and societies: Phi Theta Kappa Honors Society
+
+          Major: Information Security
+
+          Related coursework: 
+          - Computer Hardware and Software
+          - MS Network Infrastructure; Active Directory Services
+          - Security (including Network Security; Attacks/Exploits; Perimeter Defense)
+          - UNIX/Linux Administration
+          - Python/Programming
+          - Database Design
+          
+  - title: Licenses/Certifications
     layout: text
     content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+      [Link to Credly](https://www.credly.com/users/binbashburns)
+      
+      - GIAC GCLD
+      - (ISC)2 CISSP
+      - CompTIA CASP+
+      - CompTIA Pentest+
+      - CompTIA CySA+
+      - CompTIA Security+
+      - CompTIA Network+
+      - CompTIA A+
+      - Forescout Certified Administrator (FSCA)
+      - GitHub Foundations
+      - Microsoft Azure Fundamentals
+      - HashiCorp Certified Terraform Associate
+      - AWS Certified Solutions Architect – Associate
+      - AWS Certified Developer Associate
+      - (ISC)2 Systems Security Certified Practitioner (SSCP)
+      - Cisco Certified Networking Associate (CCNA)
+      - Splunk Core Certified User
 
 # Footer
 footer_show_references: true
