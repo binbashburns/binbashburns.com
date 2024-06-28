@@ -98,10 +98,10 @@ content:
         description: | # this will include new lines to allow paragraphs
           - Client Operating Systems
           - Computer Hardware
-          · Exchange Server
-          · LAN/WAN Networking
-          · Network Security
-          · Windows Server
+          - Exchange Server
+          - LAN/WAN Networking
+          - Network Security
+          - Windows Server
       - layout: right
         title: Coalfire
         sub_title: Cloud Engineer II
@@ -110,14 +110,14 @@ content:
         quote: >
           Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
         description: | # this will include new lines to allow paragraphs
-          · Transition FedRAMP and DoD client environments to align with updated NIST 800-53 revision 5 guidance (from previous revision 4 guidelines)
-          · Advise, architect and build customer cloud environments using Infrastructure as Code, shell scripting and automation
-          · Author Reference Architecture Design Documents, ensuring they are in line with best practices
-          · Illustrate network infrastructures through comprehensive and intuitive diagrams
-          · Create, review, and present detailed reports tailored for both technical specialists and high-level executives
-          · Strategic advisory on configurations across technology stacks with cloud providers such as AWS, Azure, and GCP
-          · Support and streamline the security program's assessment and authorization phases
-          · Author and peer review of detailed design documentation, including security documentation and inclusive of vendor best practices
+          - Transition FedRAMP and DoD client environments to align with updated NIST 800-53 revision 5 guidance (from previous revision 4 guidelines)
+          - Advise, architect and build customer cloud environments using Infrastructure as Code, shell scripting and automation
+          - Author Reference Architecture Design Documents, ensuring they are in line with best practices
+          - Illustrate network infrastructures through comprehensive and intuitive diagrams
+          - Create, review, and present detailed reports tailored for both technical specialists and high-level executives
+          - Strategic advisory on configurations across technology stacks with cloud providers such as AWS, Azure, and GCP
+          - Support and streamline the security program's assessment and authorization phases
+          - Author and peer review of detailed design documentation, including security documentation and inclusive of vendor best practices
       - layout: right
         title: DHS Cybersecurity and Infrastructure Security Agency (CISA)
         sub_title: IT Cybersecurity Specialist
@@ -126,16 +126,16 @@ content:
         quote: >
           CISA is the operational lead for federal cybersecurity and the national coordinator for critical infrastructure security and resilience.
         description: | # this will include new lines to allow paragraphs
-          · Participate in planning, definition, and high-level design of the solution and exploration of solution alternatives 
-          · Actively participate in the Continuous Exploration process as part of the Continuous Delivery Pipeline
-          · Work with customers, stakeholders, and suppliers to establish high-level solution intent
-          · Establish critical non-functional requirements (NFRs) for the solution and participate in the definition of others 
-          · Work with portfolio stakeholders to develop, analyze, split, and realize implementation
-          · Participate in Program Increment (PI) Planning and Pre- and Post-PI Planning, System and Solution Demos, and Inspect and Adapt(I&A) events 
-          · Plan and develop the Architectural Runway in support of new business Features and Capabilities 
-          · Work with Product and Solution Management to determine the capacity allocation for enablement work 
-          · Support technology/engineering aspects of program and solution
-          · Provide oversight and foster built-in quality and team/technical agility
+          - Participate in planning, definition, and high-level design of the solution and exploration of solution alternatives 
+          - Actively participate in the Continuous Exploration process as part of the Continuous Delivery Pipeline
+          - Work with customers, stakeholders, and suppliers to establish high-level solution intent
+          - Establish critical non-functional requirements (NFRs) for the solution and participate in the definition of others 
+          - Work with portfolio stakeholders to develop, analyze, split, and realize implementation
+          - Participate in Program Increment (PI) Planning and Pre- and Post-PI Planning, System and Solution Demos, and Inspect and Adapt(I&A) events 
+          - Plan and develop the Architectural Runway in support of new business Features and Capabilities 
+          - Work with Product and Solution Management to determine the capacity allocation for enablement work 
+          - Support technology/engineering aspects of program and solution
+          - Provide oversight and foster built-in quality and team/technical agility
       - layout: right
         title: Coalfire
         sub_title: Cloud Engineer I
@@ -144,12 +144,12 @@ content:
         quote: >
           Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
         description: | # this will include new lines to allow paragraphs
-          · Design, architect, and deploy client architectures in the AWS, Azure or GCP cloud space
-          · Member of a highly-collaborative and agile engineering team of Solution Engineers
-          · Design and implement secure and compliant enterprise servers, network infrastructure, boundary protection, and cloud architectures using Infrastructure-as-Code
-          · Conduct testing and data reviews to evaluate the effectiveness of current security measures
-          · Provide support to the security program assessment and authorization processes
-          · Author and peer review of detailed design documentation, including security documentation and inclusive of vendor best practices
+          - Design, architect, and deploy client architectures in the AWS, Azure or GCP cloud space
+          - Member of a highly-collaborative and agile engineering team of Solution Engineers
+          - Design and implement secure and compliant enterprise servers, network infrastructure, boundary protection, and cloud architectures using Infrastructure-as-Code
+          - Conduct testing and data reviews to evaluate the effectiveness of current security measures
+          - Provide support to the security program assessment and authorization processes
+          - Author and peer review of detailed design documentation, including security documentation and inclusive of vendor best practices
       - layout: right
         title: Bechtel Corporation
         sub_title: Cybersecurity System Administrator
@@ -158,12 +158,12 @@ content:
         quote: >
           Bechtel Corporation is an American engineering, procurement, construction, and project management company.
         description: | # this will include new lines to allow paragraphs
-          · Assist in preparing plans, policies and procedures for Blue Grass Chemical Agent-Destruction Pilot Plant (BGCAPP) Cybersecurity Program
-          · Support ISSO and IAM in satisfying contractual requirements to achieve and maintain ATO via documentation efforts and continuous monitoring techniques.
-          · Ensure all work processes are properly tracked to support Cybersecurity program
-          · Support, monitor, test, and troubleshoot hardware and software problems pertaining to systems under purview
-          · Conduct tests of Cybersecurity safeguards in accordance with established test plans and procedures
-          · Participate in incident response team efforts and investigate cybersecurity related incidents as directed by the IAM
+          - Assist in preparing plans, policies and procedures for Blue Grass Chemical Agent-Destruction Pilot Plant (BGCAPP) Cybersecurity Program
+          - Support ISSO and IAM in satisfying contractual requirements to achieve and maintain ATO via documentation efforts and continuous monitoring techniques.
+          - Ensure all work processes are properly tracked to support Cybersecurity program
+          - Support, monitor, test, and troubleshoot hardware and software problems pertaining to systems under purview
+          - Conduct tests of Cybersecurity safeguards in accordance with established test plans and procedures
+          - Participate in incident response team efforts and investigate cybersecurity related incidents as directed by the IAM
       - layout: right
         title: Senture, LLC.
         sub_title: Security Analyst
@@ -183,19 +183,19 @@ content:
         quote: >
           Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
-          · Assess and document enterprise compliance and risk posture as it related to it's information assets
-          · Execute strategy for dealing with increasing number of audits, compliance checks and external assessment processes for internal/external auditors, FISMA, NIST SP 800-53, SOC 2, PCI DSS 
-          · Gap analysis
-          · Create automated reports and dashboards with enterprise SIEM solution
-          · Author Standard Operating Procedures
-          · Perform IS Risk Assessment
-          · Support Ongoing Authorization (OA) / Authorization to Operate (ATO) activities
-          · Evaluate logical and physical access controls 
-          · Vulnerability management (Nessus)
-          · Incident Response Team member
-          · Coordinate with all levels of System staff including; help desk, developers and networking staff, auditors, and all technology vendors and contractors, in matters related to information security and security awareness
-          · Assess computer hardware, software, and systems for security risks or violations and work with IT staff and operations to recommend solutions. 
-          · Develop strategies to address awareness and training for all stakeholders as well as technical solutions
+          - Assess and document enterprise compliance and risk posture as it related to it's information assets
+          - Execute strategy for dealing with increasing number of audits, compliance checks and external assessment processes for internal/external auditors, FISMA, NIST SP 800-53, SOC 2, PCI DSS 
+          - Gap analysis
+          - Create automated reports and dashboards with enterprise SIEM solution
+          - Author Standard Operating Procedures
+          - Perform IS Risk Assessment
+          - Support Ongoing Authorization (OA) / Authorization to Operate (ATO) activities
+          - Evaluate logical and physical access controls 
+          - Vulnerability management (Nessus)
+          - Incident Response Team member
+          - Coordinate with all levels of System staff including; help desk, developers and networking staff, auditors, and all technology vendors and contractors, in matters related to information security and security awareness
+          - Assess computer hardware, software, and systems for security risks or violations and work with IT staff and operations to recommend solutions. 
+          - Develop strategies to address awareness and training for all stakeholders as well as technical solutions
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
