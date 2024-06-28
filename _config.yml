@@ -50,15 +50,19 @@ additional_links:
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
+about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+  Hi, I'm Matt. I'm a Cloud Engineer with a passion for automation, Infrastructure as Code, and DevSecOps. I have experience with AWS, Azure, and GCP, and I'm always looking to learn more. 
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+  I like Terraform, Ansible, and Linux, and I'm always looking for new ways to automate tasks and improve efficiency. I'm also a big fan of GitLab, and I've used it to build CI/CD pipelines, manage infrastructure, and host websites.
+  
+  I'm currently working at [Coalfire](https://coalfire.com/) as a Cloud Engineer, where I'm responsible for the design and implementation of cloud infrastructure for our clients. I'm the maintainer of [SoldierSave.com](https://soldiersave.com/), which is a GitLab-hosted website that provides resources for military veterans. You can view it's source code [here](https://gitlab.com/binbashburns/army-benefits-unofficial-pages/).
+
+  I'm also an Information Technology Specialist (25B) for the Army National Guard. I am attending Warrant Officer Candidate School to become a Cyber Warfare Technician (170A).
+
+  When I'm not working, I enjoy spending time with my family, playing with my dog, and working on personal projects.
+
+  I'm always looking for new opportunities to learn and grow, so if you think I'd be a good fit for your team, please don't hesitate to reach out.
 
 content:
   - title: Projects # Title for the section
