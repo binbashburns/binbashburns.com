@@ -34,10 +34,10 @@ linkedin_username: binbashburns
 # googlescholar_username: D847cGsAAAAJ
 
 # Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
+# additional_links:
+# - title: Link name
+#   icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+#   url: Link url (eg. https://google.com)
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -71,30 +71,106 @@ content:
       - layout: left
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
+        title: SoldierSave.com
+        link: https://soldiersave.com/
+        link_text: SoldierSave.com
         additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+          - title:  GitLab project for pages (content)
+            icon: fab fa-gitlab
+            url: https://gitlab.com/binbashburns/army-benefits-unofficial-pages/
+          - title:  GitLab project for CI/CD playbook, code for generating and publishing the Army Benefits Unofficial Pages
+            icon: fab fa-gitlab
+            url: https://gitlab.com/binbashburns/army-benefits-unofficial
         quote: >
-          Short overview of the project (optional)
+          SoldierSave is an Antora-based website that provides resources for military veterans. It is hosted on GitLab Pages and is built using GitLab CI/CD pipelines.
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          This website will be updated with new content as I find it. I'm always looking for new resources to add, so if you have any suggestions, please let me know at soldiersave.suggestions@gmail.com
   - title: Experience
     layout: list
     content:
       - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+        title: Army National Guard (KY)
+        sub_title: IT Specialist (25B)/Warrant Officer Candidate (09W/170A)
+        caption: Jun 2020 - Present
+        link: https://nationalguard.com/
         quote: >
-          Short description of the company (optional)
+          Established in 1636, the Army National Guard is the oldest component of the U.S. Armed Forces and serves as the primary combat reserve of the U.S. Army.
+        description: | # this will include new lines to allow paragraphs
+          · Client Operating Systems
+          · Computer Hardware
+          · Exchange Server
+          · LAN/WAN Networking
+          · Network Security
+          · Windows Server
+      - layout: right
+        title: Coalfire
+        sub_title: Cloud Engineer II
+        caption: Jul 2023 - Present
+        link: https://coalfire.com/
+        quote: >
+          Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
+        description: | # this will include new lines to allow paragraphs
+          · Transition FedRAMP and DoD client environments to align with updated NIST 800-53 revision 5 guidance (from previous revision 4 guidelines)
+          · Advise, architect and build customer cloud environments using Infrastructure as Code, shell scripting and automation
+          · Author Reference Architecture Design Documents, ensuring they are in line with best practices
+          · Illustrate network infrastructures through comprehensive and intuitive diagrams
+          · Create, review, and present detailed reports tailored for both technical specialists and high-level executives
+          · Strategic advisory on configurations across technology stacks with cloud providers such as AWS, Azure, and GCP
+          · Support and streamline the security program's assessment and authorization phases
+          · Author and peer review of detailed design documentation, including security documentation and inclusive of vendor best practices
+      - layout: right
+        title: DHS Cybersecurity and Infrastructure Security Agency (CISA)
+        sub_title: IT Cybersecurity Specialist
+        caption: Oct 2022 - Jul 2023
+        link: https://www.cisa.gov/
+        quote: >
+          CISA is the operational lead for federal cybersecurity and the national coordinator for critical infrastructure security and resilience.
+        description: | # this will include new lines to allow paragraphs
+          · Participate in planning, definition, and high-level design of the solution and exploration of solution alternatives 
+          · Actively participate in the Continuous Exploration process as part of the Continuous Delivery Pipeline
+          · Work with customers, stakeholders, and suppliers to establish high-level solution intent
+          · Establish critical non-functional requirements (NFRs) for the solution and participate in the definition of others 
+          · Work with portfolio stakeholders to develop, analyze, split, and realize implementation
+          · Participate in Program Increment (PI) Planning and Pre- and Post-PI Planning, System and Solution Demos, and Inspect and Adapt(I&A) events 
+          · Plan and develop the Architectural Runway in support of new business Features and Capabilities 
+          · Work with Product and Solution Management to determine the capacity allocation for enablement work 
+          · Support technology/engineering aspects of program and solution
+          · Provide oversight and foster built-in quality and team/technical agility
+      - layout: right
+        title: Coalfire
+        sub_title: Cloud Engineer I
+        caption: Feb 2022 - Oct 2022
+        link: https://coalfire.com/
+        quote: >
+          Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
+        description: | # this will include new lines to allow paragraphs
+          · Design, architect, and deploy client architectures in the AWS, Azure or GCP cloud space
+          · Member of a highly-collaborative and agile engineering team of Solution Engineers
+          · Design and implement secure and compliant enterprise servers, network infrastructure, boundary protection, and cloud architectures using Infrastructure-as-Code
+          · Conduct testing and data reviews to evaluate the effectiveness of current security measures
+          · Provide support to the security program assessment and authorization processes
+          · Author and peer review of detailed design documentation, including security documentation and inclusive of vendor best practices
+      - layout: right
+        title: Bechtel Corporation
+        sub_title: Cybersecurity System Administrator
+        caption: Nov 2021 - Feb 2022
+        link: https://bechtel.com/
+        quote: >
+          Bechtel Corporation is an American engineering, procurement, construction, and project management company.
+        description: | # this will include new lines to allow paragraphs
+          · Assist in preparing plans, policies and procedures for Blue Grass Chemical Agent-Destruction Pilot Plant (BGCAPP) Cybersecurity Program
+          · Support ISSO and IAM in satisfying contractual requirements to achieve and maintain ATO via documentation efforts and continuous monitoring techniques.
+          · Ensure all work processes are properly tracked to support Cybersecurity program
+          · Support, monitor, test, and troubleshoot hardware and software problems pertaining to systems under purview
+          · Conduct tests of Cybersecurity safeguards in accordance with established test plans and procedures
+          · Participate in incident response team efforts and investigate cybersecurity related incidents as directed by the IAM
+      - layout: right
+        title: Senture, LLC.
+        sub_title: Security Analyst
+        caption: Nov 2019 - Oct 2021
+        link: https://senture.com/
+        quote: >
+          Senture, a wholly owned subsidiary of Teleperformance, serves as the primary go-to-market entity for the US government and public sector.
         description: | # this will include new lines to allow paragraphs
           Description of role
   - title: Education
@@ -107,7 +183,19 @@ content:
         quote: >
           Short institution or course description (optional)
         description: | # this will include new lines to allow paragraphs
-          Description of qualification
+          · Assess and document enterprise compliance and risk posture as it related to it's information assets
+          · Execute strategy for dealing with increasing number of audits, compliance checks and external assessment processes for internal/external auditors, FISMA, NIST SP 800-53, SOC 2, PCI DSS 
+          · Gap analysis
+          · Create automated reports and dashboards with enterprise SIEM solution
+          · Author Standard Operating Procedures
+          · Perform IS Risk Assessment
+          · Support Ongoing Authorization (OA) / Authorization to Operate (ATO) activities
+          · Evaluate logical and physical access controls 
+          · Vulnerability management (Nessus)
+          · Incident Response Team member
+          · Coordinate with all levels of System staff including; help desk, developers and networking staff, auditors, and all technology vendors and contractors, in matters related to information security and security awareness
+          · Assess computer hardware, software, and systems for security risks or violations and work with IT staff and operations to recommend solutions. 
+          · Develop strategies to address awareness and training for all stakeholders as well as technical solutions
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
