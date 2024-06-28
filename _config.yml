@@ -96,8 +96,8 @@ content:
         quote: >
           Established in 1636, the Army National Guard is the oldest component of the U.S. Armed Forces and serves as the primary combat reserve of the U.S. Army.
         description: | # this will include new lines to allow paragraphs
-          · Client Operating Systems
-          · Computer Hardware
+          - Client Operating Systems
+          - Computer Hardware
           · Exchange Server
           · LAN/WAN Networking
           · Network Security
