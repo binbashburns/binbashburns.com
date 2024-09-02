@@ -52,13 +52,13 @@ linkedin_username: binbashburns
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, I'm Matt. I'm a Cloud Engineer with a passion for automation, Infrastructure as Code, and DevSecOps. I have experience with AWS, Azure, and GCP, and I'm always looking to learn more. 
+  Hi, I'm Matt. I'm a DevSecOps Engineer with a passion for automation, Infrastructure as Code, and DevSecOps. I have experience with AWS, Azure, and GCP, and I'm always looking to learn more. 
 
   I like Terraform, Ansible, and Linux, and I'm always looking for new ways to automate tasks and improve efficiency. I'm also a big fan of GitLab, and I've used it to build CI/CD pipelines, manage infrastructure, and host websites.
   
-  I'm currently working at [Coalfire](https://coalfire.com/) as a Cloud Engineer, where I'm responsible for the design and implementation of cloud infrastructure for our clients. I'm the maintainer of [SoldierSave.com](https://soldiersave.com/), which is a GitLab-hosted website that provides resources for military veterans. You can view it's source code [here](https://gitlab.com/binbashburns/army-benefits-unofficial-pages/).
+  I'm currently working at [Defense Unicorns](https://defenseunicorns.com/) as a DevSecOps Engineer, where I'm responsible for the design and implementation of Unicorn Delivery Service (UDS) integrations for our Mission Heroes. I'm the maintainer of [SoldierSave.com](https://soldiersave.com/), which is a GitLab-hosted website that provides resources for military veterans. You can view it's source code [here](https://gitlab.com/binbashburns/army-benefits-unofficial-pages/).
 
-  I'm also an Information Technology Specialist (25B) for the Army National Guard. I am attending Warrant Officer Candidate School to become a Cyber Warfare Technician (170A).
+  Formerly, I was an Information Technology Specialist (25B) for the Army National Guard. Now, I am attending Warrant Officer Candidate School to become a Cyber Warfare Technician (170A).
 
   When I'm not working, I enjoy spending time with my family, playing with my dog, and working on personal projects.
 
@@ -105,9 +105,16 @@ content:
           - Network Security
           - Windows Server
       - layout: right
+        title: Defense Unicorns
+        sub_title: DevSecOps Engineer
+        caption: Aug 2024 - Present
+        link: https://defenseunicorns.com/
+        description: |
+          - Coming Soon!
+      - layout: right
         title: Coalfire
         sub_title: Cloud Engineer II
-        caption: Jul 2023 - Present
+        caption: Jul 2023 - Aug 2024
         link: https://coalfire.com/
         # quote: >
         #   Coalfire is a cybersecurity and compliance services company that works with enterprises and tech businesses in FedRAMP, cloud migration, AI Risk, penetration testing, and more.
