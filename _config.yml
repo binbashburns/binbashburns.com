@@ -52,17 +52,19 @@ linkedin_username: binbashburns
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, I'm Matt. I'm a DevSecOps Engineer with a passion for automation, Infrastructure as Code, and DevSecOps. I have experience with AWS, Azure, and GCP, and I'm always looking to learn more. 
+  Hi, I'm Matt. I'm a DevSecOps Engineer specializing in cloud native technologies and secure software delivery. I focus on Kubernetes, containerization, and platform engineering, with extensive experience across AWS, Azure, and GCP cloud platforms.
 
-  I like Terraform, Ansible, and Linux, and I'm always looking for new ways to automate tasks and improve efficiency. I'm also a big fan of GitLab, and I've used it to build CI/CD pipelines, manage infrastructure, and host websites.
-  
-  I'm currently working at [Defense Unicorns](https://defenseunicorns.com/) as a DevSecOps Engineer, where I'm responsible for the design and implementation of Unicorn Delivery Service (UDS) integrations for our Mission Heroes. I'm the maintainer of [SoldierSave.com](https://soldiersave.com/), which is a GitLab-hosted website that provides resources for military veterans. You can view it's source code [here](https://gitlab.com/binbashburns/army-benefits-unofficial-pages/).
+  I'm passionate about Infrastructure as Code, GitOps practices, and building secure, scalable cloud native solutions. I work extensively with tools like Terraform, Helm, and Kubernetes, while maintaining a strong foundation in Linux systems and automation.
 
-  Formerly, I was an Information Technology Specialist (25B) for the Army National Guard. Now, I am attending Warrant Officer Candidate School to become a Cyber Warfare Technician (170A).
+  Currently, I'm a DevSecOps Engineer at [Defense Unicorns](https://defenseunicorns.com/), where I architect and implement cloud native solutions through our Unicorn Delivery Service (UDS) platform. I work closely with Mission Heroes to enable secure software delivery pipelines. I specialize in containerized applications and implementing DevSecOps practices in highly regulated environments.
+
+  I maintain [SoldierSave.com](https://soldiersave.com/), a GitLab-hosted resource platform for military veterans. You can view its source code [here](https://gitlab.com/binbashburns/army-benefits-unofficial-pages/).
+
+  I serve as a Cyber Warfare Technician (170A) in the Army National Guard, where I leverage my technical expertise to support cyber operations and defense initiatives.
 
   When I'm not working, I enjoy spending time with my family, playing with my dog, and working on personal projects.
 
-  I'm always looking for new opportunities to learn and grow, so if you think I'd be a good fit for your team, please don't hesitate to reach out.
+  I'm always eager to collaborate on innovative cloud native projects and explore new technologies in the DevSecOps space. Feel free to reach out if you'd like to connect.
 
   This online resume was generated with the help of the [Modern Resume Theme](https://github.com/sproogen/modern-resume-theme) for Jekyll. It's hosted on GitHub Pages. You can check out my source code on my [GitHub](https://github.com/binbashburns/binbashburns.com)!
 
@@ -110,7 +112,14 @@ content:
         caption: Aug 2024 - Present
         link: https://defenseunicorns.com/
         description: |
-          - Coming Soon!
+          - Individual Contributor on a small DevSecOps team leveraging GitOps practices to manage cloud-native infrastructure
+          - Design and template Helm charts to streamline Kubernetes application deployments and enforce configuration
+          - Develop and maintain GitHub Actions workflows to automate CI/CD and integrate application updates seamlessly
+          - Engineer and enforce Kubernetes network policies, leveraging Istio for service mesh implementations and security
+          - Collect and analyze application telemetry using Prometheus metrics to monitor and optimize performance
+          - Build and deploy app integrations for the Defense Unicorns Airgap App Store to enhance Mission Hero capabilities
+          - Support system integration efforts across Kubernetes clusters using tools like k3d and Docker
+          - Collaborate with stakeholders to translate complex requirements into scalable, secure, and declarative solutions
       - layout: right
         title: Coalfire
         sub_title: Cloud Engineer II
@@ -254,6 +263,7 @@ content:
       
       - GIAC GCLD
       - Google Professional Cloud Architect
+      - Kubernetes and Cloud Native Associate (KCNA)
       - (ISC)2 CISSP
       - CompTIA CASP+
       - CompTIA Pentest+
