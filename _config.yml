@@ -52,11 +52,11 @@ linkedin_username: binbashburns
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, I'm Matt. I'm a DevSecOps Engineer specializing in cloud native technologies and secure software delivery. I focus on Kubernetes, containerization, and platform engineering, with extensive experience across AWS, Azure, and GCP cloud platforms.
+  Hi, I'm Matt. I'm a DevSecOps Engineer specializing in cloud native technologies and secure software delivery. I focus on Kubernetes, containerization, and platform engineering, with plenty of experience experience across AWS, Azure, and GCP cloud platforms.
 
   I'm passionate about Infrastructure as Code, GitOps practices, and building secure, scalable cloud native solutions. I work extensively with tools like Terraform, Helm, and Kubernetes, while maintaining a strong foundation in Linux systems and automation.
 
-  Currently, I'm a DevSecOps Engineer at [Defense Unicorns](https://defenseunicorns.com/), where I architect and implement cloud native solutions through our Unicorn Delivery Service (UDS) platform. I work closely with Mission Heroes to enable secure software delivery pipelines. I specialize in containerized applications and implementing DevSecOps practices in highly regulated environments.
+  In my last position, I was a DevSecOps Engineer at [Defense Unicorns](https://defenseunicorns.com/), where I architected and implemented cloud native solutions through their Unicorn Delivery Service (UDS) platform. I worked closely with Mission Heroes to enable secure software delivery pipelines. I specialize in containerized applications and implementing DevSecOps practices in highly regulated environments.
 
   I maintain [SoldierSave.com](https://soldiersave.com/), a GitLab-hosted resource platform for military veterans. You can view its source code [here](https://gitlab.com/binbashburns/army-benefits-unofficial-pages/).
 
@@ -94,22 +94,19 @@ content:
     content:
       - layout: right
         title: Army National Guard (KY)
-        sub_title: IT Specialist (25B)/Warrant Officer Candidate (09W/170A)
+        sub_title: Cyber Warfare Technician (170A) Warrant Officer
         caption: Jun 2020 - Present
         link: https://nationalguard.com/
         # quote: >
         #   Established in 1636, the Army National Guard is the oldest component of the U.S. Armed Forces and serves as the primary combat reserve of the U.S. Army.
         description: | # this will include new lines to allow paragraphs
-          - Client Operating Systems
-          - Computer Hardware
-          - Exchange Server
-          - LAN/WAN Networking
-          - Network Security
-          - Windows Server
+          - Subject Matter Expert and advisor to the Commander and staff regarding the employment of Offensive and Defensive cyber operations assets and personnel
+          - Direct, plan, administer, manage, integrate, and assess cyberspace technical capabilities
+          - Provide technical recommendations and guidance regarding the operation and management of Army, Joint, intergovernmental, interagency, and multi-national cyberspace assets, and personnel
       - layout: right
         title: Defense Unicorns
         sub_title: DevSecOps Engineer
-        caption: Aug 2024 - Present
+        caption: Aug 2024 - Jan 2025
         link: https://defenseunicorns.com/
         description: |
           - Individual Contributor on a small DevSecOps team leveraging GitOps practices to manage cloud-native infrastructure
