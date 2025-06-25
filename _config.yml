@@ -93,6 +93,18 @@ content:
     layout: list
     content:
       - layout: right
+        title: Defense Unicorns
+        sub_title: Mission Support Engineer
+        caption: May 2025 - Present
+        link: https://defenseunicorns.com/
+        description: |
+          - Provided hands-on support for cloud-native infrastructure, applying GitOps methodologies to ensure reliable and auditable deployments
+          - Created and maintained Helm chart templates to simplify Kubernetes application rollouts and standardize configuration management
+          - Automated CI/CD pipelines with GitHub Actions, enabling rapid and consistent delivery of application updates
+          - Deploy and monitor Kubernetes to cloud environments, ensuring high availability and performance
+          - Leveraged Prometheus to gather and interpret telemetry data, driving performance improvements and proactive monitoring
+          - Developed and deployed Unicorn Delivery Service application integrations for Mission Heroes
+      - layout: right
         title: Army National Guard (KY)
         sub_title: Cyber Warfare Technician (170A) Warrant Officer
         caption: Jun 2020 - Present
@@ -258,7 +270,9 @@ content:
     content: | # this will include new lines to allow paragraphs
       [Link to Credly](https://www.credly.com/users/binbashburns)
       
-      - GIAC GCLD
+      - GIAC Cloud Security Automation (GCSA)
+      - GIAC Cloud Security Essentials (GCLD)
+      - GIAC Cloud Penetration Tester (GPEN)
       - Google Professional Cloud Architect
       - Kubernetes and Cloud Native Associate (KCNA)
       - (ISC)2 CISSP
