@@ -56,9 +56,7 @@ about_content: | # this will include new lines to allow paragraphs
 
   I'm passionate about Infrastructure as Code, GitOps practices, and building secure, scalable cloud native solutions. I work extensively with tools like Terraform, Helm, and Kubernetes, while maintaining a strong foundation in Linux systems and automation.
 
-  In my last position, I was a DevSecOps Engineer at [Defense Unicorns](https://defenseunicorns.com/), where I architected and implemented cloud native solutions through their Unicorn Delivery Service (UDS) platform. I worked closely with Mission Heroes to enable secure software delivery pipelines. I specialize in containerized applications and implementing DevSecOps practices in highly regulated environments.
-
-  I maintain [SoldierSave.com](https://soldiersave.com/), a GitLab-hosted resource platform for military veterans. You can view its source code [here](https://gitlab.com/binbashburns/army-benefits-unofficial-pages/).
+  I am a DevSecOps Engineer at [Defense Unicorns](https://defenseunicorns.com/), where I architect and implement cloud native solutions through their Unicorn Delivery Service (UDS) platform. I work closely with Mission Heroes to enable secure software delivery pipelines. I specialize in containerized applications and implementing DevSecOps practices in highly regulated environments.
 
   I serve as a Cyber Warfare Technician (170A) in the Army National Guard, where I leverage my technical expertise to support cyber operations and defense initiatives.
 
