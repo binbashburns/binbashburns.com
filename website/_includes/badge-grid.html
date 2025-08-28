@@ -25,9 +25,7 @@
       {% else %}
         <span class="pill ok">No expiry</span>
       {% endif %}
-      <div class="badge-links">
-        <a href="{{ b.Url }}">Verify</a>
-      </div>
+      <div class="badge-links"><a href="{{ b.Url }}">Verify</a></div>
       {% if b.Skills and b.Skills.size > 0 %}
         <div class="badge-skills">
           {% for s in b.Skills %}<span class="skill">{{ s }}</span>{% endfor %}
@@ -38,5 +36,5 @@
   {% endfor %}
 </div>
 {% else %}
-<p><em>No badges found. The site build may not have fetched them yet.</em></p>
+<p><em>No badges found. The build may not have fetched them yet.</em></p>
 {% endif %}
