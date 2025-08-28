@@ -43,13 +43,23 @@ jobs:
           STRICT: "0"  # set to "1" to fail when expired > 0
         run: dotnet run -c Release --project src/BadgeBox.Cli
 
-      # Build Jekyll site
+      # (only showing the changed chunk)
+      - name: Verify site tree
+        run: |
+          ls -la
+          ls -la website
+          ls -la website/_includes || true
+          ls -la website/_data || true
+
+      # Build Jekyll site (explicit source)
       - uses: ruby/setup-ruby@v1
         with: { ruby-version: "3.2" }
       - run: |
+          bundle --version
           cd website
           bundle install --path vendor/bundle
-          bundle exec jekyll build -d ../_site
+          bundle exec jekyll build --trace --verbose -s . -d ../_site
+
 
       # Upload artifact for Pages
       - uses: actions/configure-pages@v5
