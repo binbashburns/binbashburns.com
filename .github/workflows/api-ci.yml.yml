@@ -1,4 +1,6 @@
 name: API CI
+permissions:
+  contents: read
 on:
   push: { paths: [ "src/**", "tests/**", "Directory.Build.props", "BadgeBox.sln" ] }
   pull_request:
