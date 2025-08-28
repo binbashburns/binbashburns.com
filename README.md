@@ -12,7 +12,7 @@ dotnet build
 dotnet run --project src/BadgeBox.Api
 
 # 2) Fetch data into the Jekyll site
-BADGEBOX_API=http://localhost:5080 USER_ID=<your-credly-uuid> \
+BADGEBOX_API=http://localhost:5080 USER_ID=02999b05-9f6e-4eb8-9c6b-556b7ec90f54 \
   dotnet run --project src/BadgeBox.Cli
 
 # 3) Serve résumé site
