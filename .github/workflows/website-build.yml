@@ -1,0 +1,67 @@
+name: Build & Publish Website
+on:
+  push:
+    branches: [ master, main ]
+  schedule:
+    - cron: "23 6 * * 1"    # weekly build
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      USER_ID: <your-credly-uuid>   # set once (or use repo secret)
+    steps:
+      - uses: actions/checkout@v4
+
+      # Build & run API locally
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: "8.0.x" }
+      - run: dotnet restore
+      - run: dotnet build -c Release
+      - name: Run BadgeBox API
+        run: |
+          dotnet run -c Release --project src/BadgeBox.Api --urls http://localhost:5080 &
+          for i in {1..30}; do
+            if curl -fsS http://localhost:5080/health >/dev/null; then echo "API ready"; break; fi
+            sleep 1
+          done
+
+      # Use CLI (consumer) to fetch normalized JSON into the Jekyll site
+      - name: Fetch badges JSON
+        env:
+          BADGEBOX_API: http://localhost:5080
+          USER_ID: ${{ env.USER_ID }}
+          OUT_FILE: website/_data/credly-badges.json
+          STATUS_FILE: status.json
+          STRICT: "0"  # set to "1" to fail when expired > 0
+        run: dotnet run -c Release --project src/BadgeBox.Cli
+
+      # Build Jekyll site
+      - uses: ruby/setup-ruby@v1
+        with: { ruby-version: "3.2" }
+      - run: |
+          cd website
+          bundle install --path vendor/bundle
+          bundle exec jekyll build -d ../_site
+
+      # Upload artifact for Pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: "_site" }
+      - name: Build summary
+        run: |
+          echo "### Badge status" >> $GITHUB_STEP_SUMMARY
+          cat status.json >> $GITHUB_STEP_SUMMARY
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4

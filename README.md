@@ -1,12 +1,62 @@
 # binbashburns.com
 
-This is the code for [https://binbashburns.com](https://binbashburns.com), which is hosted on GitHub Pages. This is a fork of `sproogen`'s `modern-resume-theme`. Review the original source repository [here](https://github.com/sproogen/modern-resume-theme)! 
+Monorepo for:
+- **BadgeBox API (C#/.NET 8):** Normalize public Credly badges to a stable schema (+ validity).
+- **BadgeBox CLI (C#):** Consumer that fetches from the API and writes `website/_data/credly-badges.json`.
+- **Résumé site (Jekyll):** GitHub Pages résumé that renders badges in real time at build.
 
-*A modern simple static resume template and theme. Powered by Jekyll and GitHub pages.*  
-*Host your own resume on GitHub for ***free!***
+## Quick start (local)
+```bash
+# 1) API
+dotnet build
+dotnet run --project src/BadgeBox.Api
 
-----
+# 2) Fetch data into the Jekyll site
+BADGEBOX_API=http://localhost:5080 USER_ID=<your-credly-uuid> \
+  dotnet run --project src/BadgeBox.Cli
 
-## License
+# 3) Serve résumé site
+cd website
+bundle install
+bundle exec jekyll serve
+```
+## Structure
+```
+binbashburns.com/
+├─ README.md
+├─ docker-compose.yml
+├─ Directory.Build.props
+├─ BadgeBox.sln
+├─ src/
+│  ├─ BadgeBox.Api/
+│  │  ├─ Program.cs
+│  │  ├─ appsettings.json
+│  │  ├─ Models/
+│  │  │  └─ BadgeDto.cs
+│  │  └─ Services/
+│  │     ├─ ICredlyClient.cs
+│  │     ├─ CredlyClient.cs
+│  │     └─ BadgeNormalizer.cs
+│  └─ BadgeBox.Cli/
+│     └─ Program.cs
+├─ tests/
+│  └─ BadgeBox.Tests/
+│     └─ BadgeNormalizerTests.cs
+├─ website/
+│  ├─ _config.yml
+│  ├─ Gemfile
+│  ├─ index.md
+│  ├─ badges.md
+│  ├─ _includes/
+│  │  └─ badge-grid.html
+│  ├─ _data/
+│  │  └─ credly-badges.json   # populated by CI / CLI
+│  └─ assets/
+│     └─ css/
+│        └─ badges.css
+└─ .github/
+   └─ workflows/
+      ├─ api-ci.yml
+      └─ website-build.yml
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+```

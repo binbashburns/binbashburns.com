@@ -1,0 +1,5 @@
+title: "Matthew Burns — Resume"
+description: "binbashburns.com"
+theme: minima
+markdown: kramdown
+exclude: [vendor, node_modules]
