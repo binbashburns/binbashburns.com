@@ -1,0 +1,19 @@
+.badge-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem; margin: 1rem 0;
+}
+.badge-card {
+  border: 1px solid #333; border-radius: 12px; padding: .75rem; display: flex; gap: .75rem;
+  background: #111;
+}
+.badge-img { width: 72px; height: 72px; object-fit: contain; }
+.badge-meta { flex: 1; }
+.badge-name { margin: 0; font-size: 1.05rem; }
+.badge-issuer { color: #bbb; font-size: .9rem; }
+.pill { padding: 2px 6px; border-radius: 999px; font-size: .75rem; border: 1px solid #555; }
+.pill.ok { border-color: #3a5; }
+.pill.soon { border-color: #ea0; }
+.pill.expired { border-color: #d33; }
+.badge-skills { margin-top: .4rem; display: flex; flex-wrap: wrap; gap: .25rem; }
+.skill { border: 1px solid #444; border-radius: 999px; padding: 2px 6px; font-size: .72rem; color: #ddd; }
+.badge-links a { font-size: .85rem; }

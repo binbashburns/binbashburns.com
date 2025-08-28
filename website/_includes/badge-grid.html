@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/assets/css/badges.css">
+{% assign badges = site.data.credly-badges %}
+{% if badges and badges.size > 0 %}
+<div class="badge-grid">
+  {% assign sorted = badges | sort: "IssuedAt" | reverse %}
+  {% for b in sorted %}
+  <article class="badge-card">
+    <img class="badge-img" src="{{ b.ImageUrl }}" alt="{{ b.Name }}">
+    <div class="badge-meta">
+      <h3 class="badge-name">{{ b.Name }}</h3>
+      <div class="badge-issuer">{{ b.Issuer }}</div>
+      <div class="badge-dates">
+        {% if b.IssuedAt %}Issued {{ b.IssuedAt | slice: 0, 10 }}{% endif %}
+      </div>
+      {% if b.ExpiresAt %}
+        {% if b.IsExpired %}
+          <span class="pill expired">Expired</span>
+        {% else %}
+          {% if b.DaysUntilExpiry <= 30 %}
+            <span class="pill soon">{{ b.DaysUntilExpiry }} days left</span>
+          {% else %}
+            <span class="pill ok">{{ b.DaysUntilExpiry }} days left</span>
+          {% endif %}
+        {% endif %}
+      {% else %}
+        <span class="pill ok">No expiry</span>
+      {% endif %}
+      <div class="badge-links">
+        <a href="{{ b.Url }}">Verify</a>
+      </div>
+      {% if b.Skills and b.Skills.size > 0 %}
+        <div class="badge-skills">
+          {% for s in b.Skills %}<span class="skill">{{ s }}</span>{% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p><em>No badges found. The site build may not have fetched them yet.</em></p>
+{% endif %}
