@@ -1,0 +1,23 @@
+:root { --avatar-size: 200px; } 
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr var(--avatar-size);
+  gap: 1rem 2rem;
+  align-items: start;
+}
+
+.hero .avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  object-fit: cover;           
+  object-position: center;     
+  border: 2px solid #444;
+  box-shadow: 0 0 0 3px #0f0f0f inset;
+}
+
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero .avatar { justify-self: start; margin-top: .75rem; }
+}

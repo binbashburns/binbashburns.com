@@ -22,7 +22,7 @@ jobs:
 
       # Build & run API locally
       - uses: actions/setup-dotnet@v4
-        with: { dotnet-version: "8.0.x" }
+        with: { dotnet-version: "9.0.x" }
       - run: dotnet restore
       - run: dotnet build -c Release
       - name: Run BadgeBox API
@@ -48,6 +48,7 @@ jobs:
         run: |
           ls -la
           ls -la website
+          
           ls -la website/_includes || true
           ls -la website/_data || true
 
