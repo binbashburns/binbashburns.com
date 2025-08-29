@@ -16,7 +16,6 @@
   padding: 1rem;
   border: 1px solid #3a3a3a;
   border-radius: 12px;
-  background: #151515;
 }
 
 .badge-img {
@@ -57,6 +56,5 @@
   padding: .35rem .6rem;
   border: 1px solid #333;
   border-radius: 999px;
-  background: #111;
   opacity: .9;
 }
