@@ -37,7 +37,7 @@ Recent work includes architecting and shipping cloud-native solutions on regulat
 ## Experience
 
 ### Penchecks Trust - DevSecOps Engineer
-_Aug 2024 – Present_ • [penchecks.com](https://penchecks.com/)
+_Aug 2025 – Present_ • [penchecks.com](https://penchecks.com/)
 - Managed and automated AWS infrastructure and services using IaC (Terraform/CloudFormation), improving provisioning consistency and repeatability.
 - Administered Microsoft Entra ID: user/group/app lifecycle, role assignments, and access controls to support secure developer workflows.
 - Built and maintained CI/CD pipelines to automate secure, auditable deployments and compliance checks.
