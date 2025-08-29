@@ -1,0 +1,47 @@
+# ---- .NET / C# ----
+**/bin/
+**/obj/
+**/out/
+.vs/
+TestResults/
+*.user
+*.suo
+*.svclog
+*.nupkg
+*.snupkg
+*.pidb
+*.psess
+*.vsp
+*.vspx
+*.coverage
+*.coveragexml
+*.generated.cs
+*.local.json
+
+# IDEs
+.idea/
+.vscode/
+*.DotSettings.user
+
+# Logs / coverage
+*.log
+logs/
+coverage/
+*.lcov
+
+# ---- Jekyll / Ruby site (in website/) ----
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+vendor/bundle
+
+# Generated at build time
+website/_data/credly-badges.json
+status.json
+
+# OS cruft
+.DS_Store
+Thumbs.db

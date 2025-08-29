@@ -1,62 +1,189 @@
-# binbashburns.com
+# binbashburns.com — BadgeBox Capstone
 
-Monorepo for:
-- **BadgeBox API (C#/.NET 8):** Normalize public Credly badges to a stable schema (+ validity).
-- **BadgeBox CLI (C#):** Consumer that fetches from the API and writes `website/_data/credly-badges.json`.
-- **Résumé site (Jekyll):** GitHub Pages résumé that renders badges in real time at build.
+A .NET-based capstone that pulls public Credly badges and renders them in a static résumé site.
 
-## Quick start (local)
+**Components (capstone requirements):**
+- **C# Web API** (`src/BadgeBox.Api`): Minimal API that fetches public Credly badge data and normalizes it.
+- **Consumer app** (`src/BadgeBox.Cli`): Console app that calls the API and writes normalized JSON into the Jekyll site.
+- **Test library** (`tests/BadgeBox.Tests`): xUnit tests (with FluentAssertions) covering normalization logic.
+- **Documentation**: this README plus comments in code and workflows.
+
+**Website:** `website/` is a Jekyll site (served by GitHub Pages). The CLI writes `website/_data/credly-badges.json`, and a Liquid include renders a badge grid.
+
+---
+
+## Architecture
+
+```
+Credly (public JSON endpoint)
+          │
+          ▼
+   BadgeBox.Api  <-- .NET 9 Minimal API (Swagger + MemoryCache)
+      /api/badges?userId=...         /api/status?userId=... (summary)
+          │
+          ▼
+   BadgeBox.Cli  <-- Console app (calls API, writes JSON to Jekyll data)
+          │
+          ▼
+   website/ (Jekyll)  <-- builds static site with badges include
+          │
+          ▼
+   GitHub Pages (Actions deploy)
+```
+
+Caching: API responses are cached in-memory for 30 minutes.
+
+---
+
+## Prerequisites
+
+- .NET SDK **9.0**+
+- Ruby **3.x** with Bundler (for local Jekyll builds)
+- GitHub Pages enabled in the repo (Build & Deploy via GitHub Actions)
+
+---
+
+## Quick Start (local)
+
+1. **Build & test**
+   ```bash
+   dotnet restore
+   dotnet build -c Release
+   dotnet test -c Release
+   ```
+
+2. **Run the API**
+   ```bash
+   dotnet run --project src/BadgeBox.Api --urls http://localhost:5080
+   # Health check: curl -s http://localhost:5080/health
+   ```
+
+3. **Generate the badges JSON with the CLI**
+   ```bash
+   export BADGEBOX_API=http://localhost:5080
+   export USER_ID=02999b05-9f6e-4eb8-9c6b-556b7ec90f54   # your Credly user GUID
+   export OUT_FILE=website/_data/credly-badges.json
+   export STATUS_FILE=status.json
+   dotnet run --project src/BadgeBox.Cli
+   ```
+
+4. **Run the website locally (optional)**
+   ```bash
+   cd website
+   bundle install
+   bundle exec jekyll serve
+   # open http://127.0.0.1:4000
+   ```
+
+---
+
+## API
+
+Base URL (local): `http://localhost:5080`
+
+- `GET /health`  
+  Returns `{ "status": "ok" }`.
+
+- `GET /api/badges?userId={credlyUserId}`  
+  Returns normalized badge DTOs:
+  ```json
+  {
+    "id": "uuid",
+    "name": "Badge Name",
+    "issuer": "Issuer",
+    "issuedAt": "2025-01-01T00:00:00Z",
+    "expiresAt": "2029-01-01T00:00:00Z",
+    "isExpired": false,
+    "daysUntilExpiry": 1234,
+    "url": "https://www.credly.com/badges/.../public_url",
+    "imageUrl": "https://images.credly.com/images/.../image.png",
+    "description": "…",
+    "skills": ["…"]
+  }
+  ```
+
+- `GET /api/status?userId={credlyUserId}&soonDays=30`  
+  Returns summary counts `{ total, expired, expiringSoon }`.
+
+---
+
+## CLI
+
+Environment variables:
+- `BADGEBOX_API` (default `http://localhost:5080`)
+- `USER_ID` (**required**) — Credly user GUID
+- `OUT_FILE` (default `website/_data/credly-badges.json`)
+- `STATUS_FILE` (default `status.json`)
+- `STRICT` (optional; `"1"` fails if any expired certifications)
+
+Example:
 ```bash
-# 1) API
-dotnet build
-dotnet run --project src/BadgeBox.Api
-
-# 2) Fetch data into the Jekyll site
-BADGEBOX_API=http://localhost:5080 USER_ID=02999b05-9f6e-4eb8-9c6b-556b7ec90f54 \
-  dotnet run --project src/BadgeBox.Cli
-
-# 3) Serve résumé site
-cd website
-bundle install
-bundle exec jekyll serve
+BADGEBOX_API=http://localhost:5080 USER_ID=02999b05-9f6e-4eb8-9c6b-556b7ec90f54 dotnet run --project src/BadgeBox.Cli
 ```
-## Structure
+
+Exit codes:
+- `0` success
+- `1` strict mode failed (expired certs)
+- `2` missing `USER_ID`
+
+---
+
+## Tests
+
+```bash
+dotnet test -c Release
 ```
-binbashburns.com/
-├─ README.md
-├─ docker-compose.yml
-├─ Directory.Build.props
-├─ BadgeBox.sln
-├─ src/
-│  ├─ BadgeBox.Api/
-│  │  ├─ Program.cs
-│  │  ├─ appsettings.json
-│  │  ├─ Models/
-│  │  │  └─ BadgeDto.cs
-│  │  └─ Services/
-│  │     ├─ ICredlyClient.cs
-│  │     ├─ CredlyClient.cs
-│  │     └─ BadgeNormalizer.cs
-│  └─ BadgeBox.Cli/
-│     └─ Program.cs
-├─ tests/
-│  └─ BadgeBox.Tests/
-│     └─ BadgeNormalizerTests.cs
-├─ website/
-│  ├─ _config.yml
-│  ├─ Gemfile
-│  ├─ index.md
-│  ├─ badges.md
-│  ├─ _includes/
-│  │  └─ badge-grid.html
-│  ├─ _data/
-│  │  └─ credly-badges.json   # populated by CI / CLI
-│  └─ assets/
-│     └─ css/
-│        └─ badges.css
-└─ .github/
-   └─ workflows/
-      ├─ api-ci.yml
-      └─ website-build.yml
+
+- Unit tests in `tests/BadgeBox.Tests` cover the normalization logic.
+- Add more tests for edge cases (missing fields, alternate Credly shapes, expiration math).
+
+---
+
+## CI / CD
+
+- **.github/workflows/api-ci.yml**  
+  Builds and tests API & tests on pushes/PRs.
+
+- **.github/workflows/website-build.yml**  
+  - Restores, builds, and runs the API locally in the job  
+  - Runs the CLI to generate `website/_data/credly-badges.json`  
+  - Builds the Jekyll site and deploys to GitHub Pages  
+  - Also scheduled weekly (`cron`) to refresh badge data
+
+**Configuration:**
+- Make sure GitHub Pages is set to “GitHub Actions” as the source.
+- If you want to fail on expired certs in CI, set `STRICT: "1"` in the website workflow’s env.
+
+---
+
+## Project Structure
 
 ```
+src/
+  BadgeBox.Api/        # Minimal API (Swagger, Credly client, normalizer)
+  BadgeBox.Cli/        # Console app (fetch -> write JSON)
+tests/
+  BadgeBox.Tests/      # xUnit tests
+website/
+  _data/credly-badges.json  # generated by CLI (ignored by git)
+  _includes/badge-grid.html # Liquid to render badges
+  assets/css/badges.css
+  index.md, badges.md
+BadgeBox.sln
+Directory.Build.props  # shared .NET settings (net9.0, nullable, etc.)
+```
+
+---
+
+## Notes / Future Enhancements
+
+- Add disk or distributed caching layer for API.
+- Optional: proxy images via a small CDN/cache.
+- Add E2E site tests (e.g., Playwright) to verify the badges page renders in CI.
+- Add a resume “badge section” that can be toggled or filtered by issuer/skill.
+
+---
+
+## License
+
+TBD.
