@@ -1,13 +1,17 @@
 name: Build & Publish Website
+
 on:
   push:
-    branches: [ master, main ]
+    branches: [ main ]
   schedule:
-    - cron: "23 6 * * 1"    # weekly build
+    - cron: "23 6 * * 1"
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -16,24 +20,32 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      USER_ID: 02999b05-9f6e-4eb8-9c6b-556b7ec90f54   # set once (or use repo secret)
+      USER_ID: 02999b05-9f6e-4eb8-9c6b-556b7ec90f54 # Credly UUID
     steps:
       - uses: actions/checkout@v4
 
       # Build & run API locally
       - uses: actions/setup-dotnet@v4
-        with: { dotnet-version: "9.0.x" }
+        with:
+          dotnet-version: "9.0.x"
+
       - run: dotnet restore
       - run: dotnet build -c Release
+
       - name: Run BadgeBox API
         run: |
           dotnet run -c Release --project src/BadgeBox.Api --urls http://localhost:5080 &
           for i in {1..30}; do
-            if curl -fsS http://localhost:5080/health >/dev/null; then echo "API ready"; break; fi
+            if curl -fsS http://localhost:5080/health >/dev/null; then
+              echo "API ready"; ready=1; break
+            fi
             sleep 1
           done
+          if [ "${ready:-0}" != "1" ]; then
+            echo "API did not become ready in time"; exit 1
+          fi
 
-      # Use CLI (consumer) to fetch normalized JSON into the Jekyll site
+      # Use CLI to fetch normalized JSON into the Jekyll site
       - name: Fetch badges JSON
         env:
           BADGEBOX_API: http://localhost:5080
@@ -43,29 +55,33 @@ jobs:
           STRICT: "0"  # set to "1" to fail when expired > 0
         run: dotnet run -c Release --project src/BadgeBox.Cli
 
-      # (only showing the changed chunk)
+      - name: Stop API
+        if: always()
+        run: kill $(jobs -p) || true
+
       - name: Verify site tree
         run: |
           ls -la
           ls -la website
-          
           ls -la website/_includes || true
           ls -la website/_data || true
 
       # Build Jekyll site (explicit source)
       - uses: ruby/setup-ruby@v1
-        with: { ruby-version: "3.2" }
+        with:
+          ruby-version: "3.2"
       - run: |
           bundle --version
           cd website
           bundle install --path vendor/bundle
           bundle exec jekyll build --trace --verbose -s . -d ../_site
 
-
       # Upload artifact for Pages
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with: { path: "_site" }
+        with:
+          path: "_site"
+
       - name: Build summary
         run: |
           echo "### Badge status" >> $GITHUB_STEP_SUMMARY
@@ -74,5 +90,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - id: deployment
+        uses: actions/deploy-pages@v4
