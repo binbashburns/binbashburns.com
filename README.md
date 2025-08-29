@@ -1,8 +1,8 @@
-# binbashburns.com — BadgeBox Capstone
+# binbashburns.com - BadgeBox
 
-A .NET-based capstone that pulls public Credly badges and renders them in a static résumé site.
+A .NET-based project that pulls public Credly badges and renders them in a static résumé site.
 
-**Components (capstone requirements):**
+**Components (requirements):**
 - **C# Web API** (`src/BadgeBox.Api`): Minimal API that fetches public Credly badge data and normalizes it.
 - **Consumer app** (`src/BadgeBox.Cli`): Console app that calls the API and writes normalized JSON into the Jekyll site.
 - **Test library** (`tests/BadgeBox.Tests`): xUnit tests (with FluentAssertions) covering normalization logic.
@@ -111,7 +111,7 @@ Base URL (local): `http://localhost:5080`
 
 Environment variables:
 - `BADGEBOX_API` (default `http://localhost:5080`)
-- `USER_ID` (**required**) — Credly user GUID
+- `USER_ID` (**required**) - Credly user GUID
 - `OUT_FILE` (default `website/_data/credly-badges.json`)
 - `STATUS_FILE` (default `status.json`)
 - `STRICT` (optional; `"1"` fails if any expired certifications)
