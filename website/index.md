@@ -28,9 +28,9 @@ _DevSecOps Engineer • Cloud-native & Kubernetes • Secure software delivery_
 Hi, I’m Matt: a DevSecOps Engineer focused on secure software delivery and cloud-native platforms.  
 I specialize in **Kubernetes**, **containerization**, and **platform engineering** across **AWS**, **Azure**, and **GCP**. I’m big on **Infrastructure as Code**, **GitOps**, and automation with tools like **Terraform**, **Helm**, and **GitHub Actions**, grounded in a strong **Linux** foundation.
 
-I’m also deeply interested in **OT/ICS security**. In my home lab I tinker with **PLC programming** and **Modbus/TCP** traffic, and I study ICS defense patterns informed by **SANS ICS 130** and **ICS 515**. Lately I’ve been exploring how cloud-native practices—policy-as-code, GitOps, and telemetry—translate to industrial environments while respecting safety and reliability constraints.
+I’m also deeply interested in **OT/ICS security**. In my home lab I tinker with **PLC programming** and **Modbus/TCP** traffic, and I study ICS defense patterns informed by **SANS ICS 130** and **ICS 515**. Lately I’ve been exploring how cloud-native practices (like policy-as-code, GitOps, and telemetry) translate to industrial environments while respecting safety and reliability constraints.
 
-Recent work includes architecting and shipping cloud-native solutions on regulated networks, building declarative delivery pipelines, and hardening multi-cluster environments. I enjoy bridging the gap between modern platform engineering and the unique realities of OT—especially where visibility, segmentation, and secure delivery meet.
+Recent work includes architecting and shipping cloud-native solutions on regulated networks, building declarative delivery pipelines, and hardening multi-cluster environments. I enjoy bridging the gap between modern platform engineering and the unique realities of OT; especially where visibility, segmentation, and secure delivery meet.
 
 ---
 
