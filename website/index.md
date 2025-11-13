@@ -25,12 +25,9 @@ _DevSecOps Engineer • Cloud-native & Kubernetes • Secure software delivery_
 
 ## About me
 
-Hi, I’m Matt: a DevSecOps Engineer focused on secure software delivery and cloud-native platforms.  
-I specialize in **Kubernetes**, **containerization**, and **platform engineering** across **AWS**, **Azure**, and **GCP**. I’m big on **Infrastructure as Code**, **GitOps**, and automation with tools like **Terraform**, **Helm**, and **GitHub Actions**, grounded in a strong **Linux** foundation.
+Hi, I'm Matt: a DevSecOps Engineer specializing in **Kubernetes**, **cloud platforms** (AWS/Azure/GCP), and **secure software delivery**. I focus on **Infrastructure as Code**, **GitOps**, and automation with **Terraform**, **Helm**, and **GitHub Actions**.
 
-I’m also deeply interested in **OT/ICS security**. In my home lab I tinker with **PLC programming** and **Modbus/TCP** traffic, and I study ICS defense patterns informed by **SANS ICS 130** and **ICS 515**. Lately I’ve been exploring how cloud-native practices (like policy-as-code, GitOps, and telemetry) translate to industrial environments while respecting safety and reliability constraints.
-
-Recent work includes architecting and shipping cloud-native solutions on regulated networks, building declarative delivery pipelines, and hardening multi-cluster environments. I enjoy bridging the gap between modern platform engineering and the unique realities of OT; especially where visibility, segmentation, and secure delivery meet.
+I'm passionate about **penetration testing** and offensive security. I recently earned my **GIAC Certified Penetration Tester (GCPN)** and enjoy exploring vulnerabilities and attack vectors in my home lab.
 
 ---
 
@@ -50,7 +47,7 @@ _Jun 2020 – Present_ • [nationalguard.com](https://nationalguard.com/)
 - Provide guidance across Army/Joint and interagency cyberspace efforts.
 
 ### Defense Unicorns - DevSecOps Engineer  
-_Aug 2024 – August 2025_ • [defenseunicorns.com](https://defenseunicorns.com/)
+_Aug 2024 – Aug 2025_ • [defenseunicorns.com](https://defenseunicorns.com/)
 - Delivered GitOps-managed, cloud-native infrastructure via UDS platform.
 - Templated **Helm** charts for consistent K8s app deployments and policy.
 - Built **GitHub Actions** CI/CD for automated, secure delivery.
@@ -96,6 +93,11 @@ _Nov 2019 – Oct 2021_ • [senture.com](https://senture.com/)
 
 ## Education
 
+### CodeYou (Louisville) - **Software Engineering with C# (Student)**  
+_Aug 2025 – Apr 2026_  
+- Enrolled in the Software Development cohort focusing on C#, .NET, ASP.NET Core, and full-stack development.
+- Building skills in object-oriented programming, web APIs, database design, and modern software architecture.
+
 ### University of the Cumberlands - B.A.S. Information Technology (Cybersecurity)  
 _Apr 2022 – May 2023_
 - **GPA:** 4.0 • **Honors:** Summa Cum Laude • President, UC Cyber Club  
@@ -111,8 +113,15 @@ _2017 – 2019_
 
 ## Volunteer & Community
 
+### CodeYou (Louisville) - **Cybersecurity Mentor (Volunteer)**  
+_Aug 2025 – Present_  
+- Mentor students in the **Intro to Cyber** cohort, providing guidance on foundational security concepts and career pathways.
+- Lead hands-on penetration testing demos covering tools like Nmap, Metasploit, Burp Suite, and wireless attacks with WiFi Pineapple.
+- Moderate discussions on real-world security scenarios, threat landscapes, and defensive strategies.
+- Provide one-on-one mentorship to help students build practical skills and confidence in cybersecurity.
+
 ### Pet Cancer Foundation - **Governance, Risk & Compliance (Volunteer)**  
-_June 2025 – Present_  
+_Jun 2025 – Present_  
 - Established a lightweight **GRC framework** mapped to **NIST CSF** / **CIS Controls**
 - Authored foundational **security policies** (access control, data classification, vendor risk, incident response, acceptable use).  
 - Performed **vendor due-diligence** for enterprise platforms; implemented data-minimization and retention standards.
@@ -121,11 +130,10 @@ _June 2025 – Present_
 
 ## Projects
 
-### SoldierSave.com - Resources for military veterans
+### [SoldierSave.com](https://soldiersave.com/) - Resources for military veterans
 - Antora-based static site hosted on GitLab Pages with CI/CD.
 - Ongoing content curation; community suggestions welcome.
-- [Link](https://soldiersave.com/)
-  _Email:_ soldiersave.suggestions@gmail.com
+- Email: soldiersave.suggestions [at] gmail [dot] com
 
 ---
 

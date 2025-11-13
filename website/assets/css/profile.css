@@ -15,6 +15,7 @@
   object-position: center;     
   border: 2px solid #444;
   box-shadow: 0 0 0 3px #0f0f0f inset;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 700px) {
