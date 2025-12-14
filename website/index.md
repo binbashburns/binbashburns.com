@@ -130,10 +130,21 @@ _Jun 2025 – Present_
 
 ## Projects
 
-### [SoldierSave.com](https://soldiersave.com/) - Resources for military veterans
-- Antora-based static site hosted on GitLab Pages with CI/CD.
-- Ongoing content curation; community suggestions welcome.
-- Email: soldiersave.suggestions [at] gmail [dot] com
+### SoldierSave
+
+[![Live site](https://img.shields.io/badge/site-soldiersave.com-blue)](https://soldiersave.com/) [![GitHub](https://img.shields.io/badge/code-binbashburns%2Fsoldiersave.com-black)](https://github.com/binbashburns/soldiersave.com)
+
+- Blazor WebAssembly site hosted via GitHub Pages, backed by a structured `benefits.json` dataset.
+- Provides searchable, tag-filtered benefits, discounts, and resources for service members, veterans, and families.
+- Community contributions flow through GitHub Issues and auto-generated pull requests, plus scheduled link checking via GitHub Actions.
+
+### BadgeBox
+
+[![Live site](https://img.shields.io/badge/site-badge--box.com-blue)](https://badge-box.com) [![GitHub](https://img.shields.io/badge/code-binbashburns%2Fbadgebox--resume-black)](https://github.com/binbashburns/badgebox-resume)
+
+- Resume template that pulls live **Credly** certifications via a .NET 9 minimal API and CLI, then renders them into a Jekyll site.
+- Ships with a GitHub Actions workflow that builds the API/CLI, generates normalized badge JSON, and publishes the site to GitHub Pages or a custom domain.
+- Designed to be forked and customized so others can quickly stand up their own resume + badges site.
 
 ---
 
