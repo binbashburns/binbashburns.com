@@ -22,3 +22,22 @@
   .hero { grid-template-columns: 1fr; }
   .hero .avatar { justify-self: start; margin-top: .75rem; }
 }
+
+.gh-corner {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #fff;
+  color: #111;
+  display: inline-flex; align-items: center; justify-content: center;
+  z-index: 1000;
+  transition: background 120ms, border-color 120ms;
+}
+.gh-corner:hover {
+  border-color: rgba(0,0,0,0.4);
+  background: #f4f4f4;
+  text-decoration: none;
+}

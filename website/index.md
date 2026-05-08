@@ -6,10 +6,16 @@ permalink: /
 
 <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
 
+<a class="gh-corner" href="https://github.com/binbashburns" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub profile">
+  <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+</a>
+
 {% capture header_md %}
 # Matthew Burns
 
-_DevSecOps Engineer • Cloud-native & Kubernetes • Secure software delivery_
+_Senior Security Engineer • Cloud security, AppSec, IaC, governance, offensive testing_
 
 - **Email:** [pro.mattburns@gmail.com](mailto:pro.mattburns@gmail.com)  
 - **GitHub:** [github.com/binbashburns](https://github.com/binbashburns)  
@@ -25,9 +31,11 @@ _DevSecOps Engineer • Cloud-native & Kubernetes • Secure software delivery_
 
 ## About me
 
-Hi, I'm Matt: a DevSecOps Engineer specializing in **Kubernetes**, **cloud platforms** (AWS/Azure/GCP), and **secure software delivery**. I focus on **Infrastructure as Code**, **GitOps**, and automation with **Terraform**, **Helm**, and **GitHub Actions**.
+Hi, I'm Matt. I'm a **senior security engineer** working across cloud platforms (AWS/Azure/GCP), application security, infrastructure-as-code, governance and compliance (NIST 800-53, SOC 2, FedRAMP, DoD), and offensive testing. I work where engineering meets risk: turning policies into pipelines, mapping controls to tooling, and treating security as a product feature rather than a gate.
 
 I'm passionate about **penetration testing** and offensive security. I recently earned my **GIAC Certified Penetration Tester (GCPN)** and enjoy exploring vulnerabilities and attack vectors in my home lab.
+
+I'm also actively exploring how **AI augments modern software delivery** and where it strengthens security engineering practice. A current result is **[devsecops.binbashburns.com](https://devsecops.binbashburns.com)**, a vendor-neutral security stack modeler that maps tool selections to NIST CSF 2.0 / SOC 2 / SSDF controls and exports both a Digital SSP and a runnable CI workflow.
 
 ---
 
@@ -129,6 +137,15 @@ _Jun 2025 – Present_
 ---
 
 ## Projects
+
+### Security Stack Modeler
+
+[![Live site](https://img.shields.io/badge/site-devsecops.binbashburns.com-blue)](https://devsecops.binbashburns.com) [![GitHub](https://img.shields.io/badge/code-binbashburns%2Fsecurity--stack--modeler-black)](https://github.com/binbashburns/security-stack-modeler)
+
+- Vendor-neutral, organization-agnostic decision tool for assembling a security program from scratch.
+- Pick a tool per capability across the SDLC and runtime stack; live annual budget, control-coverage matrix against NIST CSF 2.0 / SOC 2 TSC / NIST SSDF, and DevSecOps pipeline maturity recompute on every change.
+- Exports a Digital System Security Plan (PDF) and a runnable `.github/workflows/security.yml` based on the selected scanners.
+- Self-maintaining via GitHub Actions: link checker, sanitize check, and a GitHub-Models-driven price freshness audit that opens issues when vendor pricing pages drift from cited numbers.
 
 ### SoldierSave
 
