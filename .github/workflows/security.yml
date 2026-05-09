@@ -9,6 +9,7 @@ on:
       - "**/*.sln"
       - "**/*.razor"
       - "**/*.cshtml"
+      - ".github/workflows/security.yml"
   push:
     branches: [main]
 
