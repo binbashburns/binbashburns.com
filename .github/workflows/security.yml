@@ -1,0 +1,29 @@
+name: security
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "**/*.cs"
+      - "**/*.csproj"
+      - "**/*.sln"
+      - "**/*.razor"
+      - "**/*.cshtml"
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  sast:
+    uses: binbashburns/security-pipelines/.github/workflows/sast.yml@main
+    with:
+      language: csharp
+
+  sbom:
+    uses: binbashburns/security-pipelines/.github/workflows/sbom-vuln.yml@main
+
+  secrets:
+    uses: binbashburns/security-pipelines/.github/workflows/secrets.yml@main
