@@ -54,15 +54,15 @@
   }
 }
 
-/* Dracula dark theme */
+/* Dracula dark theme — palette mirrors devsecops.binbashburns.com */
 [data-theme="dark"] {
   --bbb-bg: #282a36;
   --bbb-surface: #2d2f3d;
   --bbb-surface-warm: #353749;
   --bbb-text: #f8f8f2;
   --bbb-text-muted: #c5c8d6;
-  --bbb-border: rgba(98, 114, 164, 0.32);
-  --bbb-border-strong: rgba(98, 114, 164, 0.6);
+  --bbb-border: rgba(98, 114, 164, 0.28);
+  --bbb-border-strong: rgba(98, 114, 164, 0.55);
   --bbb-link: #bd93f9;
   --bbb-link-hover: #ff79c6;
   --bbb-code-bg: #44475a;
