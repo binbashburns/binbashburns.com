@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('bbb-theme');
+      var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) { /* localStorage unavailable */ }
+  })();
+</script>
+<script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>

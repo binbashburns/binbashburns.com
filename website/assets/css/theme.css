@@ -1,0 +1,143 @@
+/* Top-right widget: GitHub icon + light/dark toggle */
+.bbb-topbar {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.bbb-topbar a,
+.bbb-topbar button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(127, 127, 127, 0.4);
+  background: rgba(255, 255, 255, 0.92);
+  color: #24292f;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 120ms, border-color 120ms, color 120ms;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1;
+}
+
+.bbb-topbar a:hover,
+.bbb-topbar button:hover {
+  border-color: rgba(127, 127, 127, 0.8);
+  text-decoration: none;
+}
+
+.bbb-topbar svg { display: block; }
+
+/* Dracula dark theme */
+[data-theme="dark"] {
+  --bbb-bg: #282a36;
+  --bbb-surface: #2d2f3d;
+  --bbb-surface-warm: #353749;
+  --bbb-text: #f8f8f2;
+  --bbb-text-muted: #c5c8d6;
+  --bbb-border: rgba(98, 114, 164, 0.32);
+  --bbb-border-strong: rgba(98, 114, 164, 0.6);
+  --bbb-link: #bd93f9;
+  --bbb-link-hover: #ff79c6;
+  --bbb-code-bg: #44475a;
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+  background: var(--bbb-bg);
+  color: var(--bbb-text);
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] .site-title,
+[data-theme="dark"] .site-title:visited {
+  color: var(--bbb-link);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--bbb-link-hover);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] strong {
+  color: var(--bbb-text);
+}
+
+[data-theme="dark"] .site-header,
+[data-theme="dark"] .site-footer {
+  border-color: var(--bbb-border);
+  background: var(--bbb-bg);
+  color: var(--bbb-text);
+}
+
+[data-theme="dark"] .page-link,
+[data-theme="dark"] .page-link:visited {
+  color: var(--bbb-text);
+}
+
+[data-theme="dark"] .post-meta,
+[data-theme="dark"] .post-link {
+  color: var(--bbb-text-muted);
+}
+
+[data-theme="dark"] hr {
+  border-color: var(--bbb-border);
+}
+
+[data-theme="dark"] code,
+[data-theme="dark"] pre {
+  background: var(--bbb-code-bg);
+  color: var(--bbb-text);
+  border-color: var(--bbb-border);
+}
+
+[data-theme="dark"] blockquote {
+  color: var(--bbb-text-muted);
+  border-left-color: var(--bbb-border-strong);
+}
+
+[data-theme="dark"] table th,
+[data-theme="dark"] table td {
+  border-color: var(--bbb-border);
+}
+
+[data-theme="dark"] .badge-card {
+  border-color: var(--bbb-border-strong);
+  background: var(--bbb-surface);
+}
+
+[data-theme="dark"] .pill,
+[data-theme="dark"] .skills-cloud .skill {
+  border-color: var(--bbb-border-strong);
+}
+
+[data-theme="dark"] .hero .avatar {
+  border-color: var(--bbb-border-strong);
+  box-shadow: 0 0 0 3px var(--bbb-bg) inset;
+}
+
+[data-theme="dark"] .bbb-topbar a,
+[data-theme="dark"] .bbb-topbar button {
+  background: var(--bbb-surface);
+  color: var(--bbb-text);
+  border-color: var(--bbb-border);
+}
+
+[data-theme="dark"] .bbb-topbar a:hover,
+[data-theme="dark"] .bbb-topbar button:hover {
+  background: var(--bbb-surface-warm);
+  border-color: var(--bbb-border-strong);
+}
